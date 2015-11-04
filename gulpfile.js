@@ -47,8 +47,12 @@ var fontBuildLocation = './build/fonts';
  * Puts the minified file in the specified build location
  */
 gulp.task('js', function() {
+  var opts = {
+    mangle: false
+  }
+
   gulp.src(jsLocations)
-    .pipe(uglify())
+    .pipe(uglify(opts))
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest(jsBuildLocation));
 });
