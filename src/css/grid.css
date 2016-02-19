@@ -27,3 +27,8 @@
 .grid-6 {
   width: 100%;
 }
+@media (max-width: 640px) {
+  [class*='grid-'] {
+    width: 100%;
+  }
+}
